@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="'width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/MyStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Register.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/Myicon.png' %}">
+
+<title>VCC APP | {% block title %}{% endblock %}</title>
+</head>
+
+<body style="background-color: gainsboro">
+
+{% include 'partial_templates/_navbar.html' %}
+
+{% block content %}
+<div class="container" id="ui">
+    <div class="row">
+        <h1 name="title">
+        VACCINATION CARD CHECKER
+        </h1>
+    </div>
+    <div class="row">
+        <h3>
+        Check Vaccination card if Valid
+        </h3>
+    </div>
+    <div class="row">
+    <div class="col">
+        <div class="container">
+        <p>
+            " Take wrong turns. Talk to strangers. Open unmarked doors. And if you
+            see a group of people in a field, go find out what they are doing. Do
+            things without always knowing how they'll turn out. You're curious and
+            smart and bored, and all you see is the choice between working hard and
+            slacking off. There are so many adventures that you miss because you're
+            waiting to think of a plan. To find them, loo for tiny interesting choices.
+            And remember that you are always making up the future as you go. "
+
+
+                                                                -Randall Munroe
+        </p>
+        </div>
+    </div>
+</div>
+    <div class="row">
+
+    <div class="col">
+        <div class="container" id="searchbox" >
+            <div class="container" id="searchbox2" >
+        <form class="form-inline" action="{% url 'users:Search' %}" method="GET" >
+            <div class="input-group" id="group">
+                <input class="form-control mr-sm-2"
+                       type="search"
+                       placeholder="Enter Vaccination Card Id Number"
+                       aria-label="Search"
+                       align="center"
+                       name="SearchId"
+                       id="SearchId" >
+                <button class="btn btn-secondary" type="submit" name="search">Search</button>
+            </div>
+
+        </form>
+    <div class="container" id="iframecon">
+        <iframe  class="myiframe"
+
+                src="https://www.youtube.com/embed/JfVOs4VSpmA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+<div class="row">
+    <div class="col text-center">
+        <div class="container ">
+            <h1>How To Use</h1>
+            <li>
+            Input the Covid-19 Vaccination Card's identification number.
+            </li>
+            <li>
+            Then Click the Search Button
+            </li>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="container ">
+             <h1>How To Register</h1>
+            <li>
+            From the menu bar, click Register.
+            </li>
+            <li>
+            fill up the form
+            </li>
+             <li>
+            Then click the submit button.
+            </li>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}
+{% include 'partial_templates/footer.html' %}
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

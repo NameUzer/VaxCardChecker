@@ -1,0 +1,56 @@
+#iframecon{
+    padding: 0;
+    margin: auto;
+    max-width: 30em;
+    min-width: 10em;
+    margin-top: 3px;
+
+}
+
+#ui{
+    margin-top: 50px;
+}
+.myiframe{
+    width: 100%;
+}
+#searchbox{
+    padding: 30px;
+
+}
+#searchbox2 {
+    padding: 0;
+    max-width: 30em;
+    min-width: 5em;
+}
+
+button{
+    background-color: blueviolet!important;
+    color: yellow!important;
+}
+h1[name=title]{
+
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 3em;
+    background: -webkit-linear-gradient(#990099, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h3{
+
+    font-size: 20px;
+    background: -webkit-linear-gradient(#990098, #444444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+#group{
+    max-width: 100em;
+    min-width: 19em;
+}
+
+#infocon{
+    padding-bottom: 23vh;
+    }
+

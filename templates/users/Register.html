@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Registration
+{% endblock%}
+
+{%block content%}<div class="container" id="basecon">
+<div class="container" id="regform">
+<h1 class="text-center display-3 " id="regtitle">REGISTRATION FORM</h1>
+</div>
+<div class="container" id="regcon">
+    <form action="{% url 'users:processRegister' %}" method="post" enctype="multipart/form-data"  class="form-container">
+    {% csrf_token %}
+
+  <div class="row g-2 mb-3" id="idclass">
+      <div class="col">
+      </div>
+         <div class="col-md-8">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="id number" placeholder="Enter Id number" name="id number" required>
+                <label for="id number">ID Number</label>
+            </div>
+        </div>
+      <div class="col">
+      </div>
+  </div>
+
+  <div class="row g-2 mb-3">
+    <div class="col">
+    </div>
+      <div class="col-md-3">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="last name" placeholder="Enter lastname" name="last name" required>
+            <label for="last name">Last Name</label>
+          </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-floating">
+            <input type="text" class="form-control" id="first name" placeholder="Enter firstname" name="first name" required>
+            <label for="first name">First Name</label>
+        </div>
+      </div>
+      <div class="col-md-2">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="middle initial" placeholder="Enter middleinitial" name="middle initial" required>
+            <label for="middle initial">Middle Initial</label>
+          </div>
+      </div>
+      <div class="col">
+      </div>
+  </div>
+
+  <div class="row g-2 mb-3">
+    <div class="col">
+    </div>
+
+
+    <div class="col-md-3">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="address" placeholder="Enter address" name="address"  required>
+      <label for="address">Address</label>
+    </div>
+    </div>
+    <div class="col-md-3">
+          <div class="form-floating">
+            <input type="number" class="form-control" id="contact number" placeholder="Enter contactnumber" name="contact number" required>
+            <label for="contact number">Contact Number</label>
+          </div>
+    </div>
+    <div class="col-md-2">
+    <div class="form-floating">
+       <input  class="form-control" type="date" value="2018-07-22"
+       min="1990-01-01" max="2022-12-31" id="birthday" name="birthday"  placeholder="dd/mm/yyyy"  required>
+       <label for="birthday">Date of Birth</label>
+    </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row g-2 mb-2">
+      <div class="col">
+      </div>
+         <div class="col-md-8">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+                <label for="id number">EMAIL</label>
+            </div>
+        </div>
+      <div class="col">
+      </div>
+  </div>
+
+  <div class="row g-2">
+    <div class="col">
+    </div>
+    <h4 class="text-center display-6">Vaccine Manufacturer</h4>
+
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row g-2">
+    <div class="col">
+    </div>
+
+
+  <div class="col-md-3">
+  <div class="input-group mb-3">
+      <label class="input-group-text" for="ManufacturerFD">First Dose</label>
+      <select class="form-select" id="ManufacturerFD" name="first dose">
+        <option selected>Choose...</option>
+        <option value="Pfizer–BioNTech">Pfizer–BioNTech</option>
+        <option value="Moderna">Moderna</option>
+        <option value="ZyCoV-D">ZyCoV-D</option>
+        <option value="Oxford–AstraZeneca">Oxford–AstraZeneca</option>
+        <option value="Janssen">Janssen</option>
+        <option value="Sputnik V">Sputnik V</option>
+        <option value="Sputnik Light">Sputnik Light</option>
+        <option value="Convidecia">Convidecia</option>
+      </select>
+  </div>
+  </div>
+
+  <div class="col-md-3">
+  <div class="input-group mb-3">
+     <label class="input-group-text" for="dateFD">Date</label>
+     <input  class="form-control" type="date" value="2021-04-22"
+     min="1990-01-01" max="2022-12-31" id="dateFD" name="dfd" placeholder="dd/mm/yyyy"  required>
+  </div>
+  </div>
+  <div class="col">
+  </div>
+  </div>
+
+  <div class="row g-2 mb-3">
+  <div class="col">
+  </div>
+  <div class="col-md-3">
+  <div class="input-group mb-2">
+      <label class="input-group-text" for="ManufacturerFD">Second Dose</label>
+      <select class="form-select" id="ManufacturerFD" name="second dose">
+        <option selected>Choose...</option>
+        <option value="Pfizer–BioNTech">Pfizer–BioNTech</option>
+        <option value="Moderna">Moderna</option>
+        <option value="ZyCoV-D">ZyCoV-D</option>
+        <option value="Oxford–AstraZeneca">Oxford–AstraZeneca</option>
+        <option value="Janssen">Janssen</option>
+        <option value="Sputnik V">Sputnik V</option>
+        <option value="Sputnik Light">Sputnik Light</option>
+        <option value="Convidecia">Convidecia</option>
+      </select>
+  </div>
+  </div>
+
+  <div class="col-md-3">
+  <div class="input-group mb-2">
+     <label class="input-group-text" for="dateSD">Date</label>
+     <input  class="form-control"  type="date" value="2021-04-22"
+     min="1990-01-01" max="2022-12-31" id="dateSD" name="dsd" placeholder="dd/mm/yyyy"  required>
+  </div>
+  </div>
+  <div class="col">
+  </div>
+  </div>
+
+
+
+  <div class="row g-2">
+      <div class="col">
+      </div>
+          <div class="col-md-4">
+          <div class="input-group mb-1">
+        <input type="file" class="form-control" id="Vcpic" name="Vcpic"/>
+          </div>
+          </div>
+      <div class="col">
+      </div>
+  </div>
+
+<div class="row g-2"style="text-align: center">
+
+<div class="form-check" >
+
+      <label class="form-check-label" for="flexCheckChecked">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name ="flexCheckChecked" required >
+        <span class="iconic-label" style="color: black!important; text-align: center">I agree to the <a href="terms" target="_blank" class="link-info">Terms and Conditions</a>.</span>
+      <button type="submit" class="btn btn-primary " id="submit"
+            name="submit">Submit</button>
+      </label>
+
+</div>
+</div>
+
+
+
+
+  </form>
+</div>
+</div>
+{%endblock%}

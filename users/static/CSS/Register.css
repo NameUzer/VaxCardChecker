@@ -1,0 +1,49 @@
+#basecon{
+    margin-top: 30px;
+    max-width: 50em;
+    min-width: 10em;
+}
+#regform{
+    background-color: darkslateblue;
+    margin-top: 30px;
+    max-width: 50em;
+    min-width: 10em;
+    border-radius:15px 15px 0px 0px ;
+}
+
+#regcon{
+        background-color: white;
+        max-width: 50em;
+        min-width: 10em;
+        min-height: 30px;
+        margin-bottom: 30px;
+        border-radius: 0px 0px 15px 15px;
+        max-height: 1200px;
+    }
+    #regtitle{
+        font-family: "Book Antiqua";
+        font-weight: bolder;
+        color: white!important;
+        font-size: 2.5em;
+    }
+    h4{
+        color: black!important;
+        font-weight: bolder;
+        font-family: "Adobe Devanagari";
+    }
+
+    label{
+        font-size: 14px;
+    }
+    button[name=submit]{
+       position: relative;
+        display: flex;
+
+
+    }
+#submit{
+    left: 30%;
+}
+    #idclass{
+        padding-top: 30px;
+    }
