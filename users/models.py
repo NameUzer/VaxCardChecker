@@ -11,13 +11,10 @@ class Enjoyer(models.Model):
     Lname = models.CharField(max_length=100, verbose_name='Last Name')
     Fname=models.CharField(max_length=100, verbose_name='First Name')
     MI = models.CharField(max_length=100, verbose_name='Middle Initial')
-    address=models.CharField(max_length=100,verbose_name='Address')
-    contactnumber=models.CharField(max_length=11,verbose_name='Contact Number')
-    dateofbirth = models.DateField(auto_now_add=False,auto_now=False,blank=True, verbose_name='Date of Birth')
     VMfirstdose=models.CharField(max_length=100,verbose_name='VM First Dose')
     VMseconddose=models.CharField(max_length=100,verbose_name='VM Second Dose')
     Sfirstdose=models.DateField(auto_now_add=False,auto_now=False,blank=True, verbose_name='Sched First Dose')
-    Sseconddose = models.DateTimeField(auto_now_add=False,auto_now=False,blank=True, verbose_name='Sched Second Dose')
+    Sseconddose = models.DateField(auto_now_add=False,auto_now=False,blank=True, verbose_name='Sched Second Dose')
 
 
     def __str__(self):
